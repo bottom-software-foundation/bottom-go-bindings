@@ -7,7 +7,7 @@ This experiments with bridging Rust through Python through C to Go, for Golang b
 - Rust
 - Python3.8 (+ `python3.8-dev`)
 - Golang
-- [bottom-py](https://pypi.org/project/bottom-py)
+- [bottom-py](https://pypi.org/project/bottomify)
 - [`go-python3.8`](https://github.com/NCPlayz/go-python3)
 
 # Installation
