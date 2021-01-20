@@ -7,6 +7,19 @@ import (
 	"github.com/NCPlayz/go-python3"
 )
 
+func encodeBytes(value string) string {
+	module := importBottom()
+
+	encodeFunc := module.GetAttrString("encode")
+
+	args := python3.PyTuple_New(1)
+	valueAsUnicode := python3.PyBytes_FromString(value)
+	python3.PyTuple_SetItem(args, 0, valueAsUnicode)
+
+	returnValue := encodeFunc.CallObject(args)
+	return python3.PyUnicode_AsUTF8(returnValue)
+}
+
 func encode(value string) string {
 	module := importBottom()
 
